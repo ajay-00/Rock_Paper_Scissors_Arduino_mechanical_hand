@@ -1,12 +1,3 @@
-/* Sweep
- by BARRAGAN <http://barraganstudio.com>
- This example code is in the public domain.
-
- modified 8 Nov 2013
- by Scott Fitzgerald
- http://www.arduino.cc/en/Tutorial/Sweep
-*/
-
 #include <Servo.h>
 #include <LiquidCrystal.h>
 
@@ -52,12 +43,6 @@ void setup() {
   myservo3.write(pos);
   myservo4.write(pos);
   myservo5.write(pos); 
-
-          
-                            
-      
-  
-
 }
 
 void loop() {
@@ -74,7 +59,6 @@ void loop() {
 
   Serial.print("Distance: ");
   Serial.println(distance);
-
 
   lcd.clear();
   lcd.print("Go");
@@ -93,40 +77,30 @@ void loop() {
        lcd.clear();
       lcd.print("paper");
       Serial.println("paper");
-    
-      
+     
       delay (1000);
        lcd.clear();
       lcd.print("scissors");
       Serial.println("scissors");
       delay (1000);
-    
-      
+          
       if(randNumber == 0){
         Serial.println("paper");
         lcd.clear();
         lcd.print("paper");
-           
-              
+                         
             myservo2.write(0);
             myservo3.write(0);
             myservo4.write(0);
             myservo5.write(0);           
-            delay(15);                       
-          
+            delay(15);                                
     
           delay (4000);
-         
-      
+               
             myservo2.write(90);
             myservo3.write(90);
             myservo4.write(90);
-            myservo5.write(90);               
-                              
-          
-    
-          
-          
+            myservo5.write(90);                                                 
         }
     
       else if(randNumber == 1){
@@ -139,17 +113,14 @@ void loop() {
             myservo5.write(180);
             myservo4.write(180);      
             delay(15);                       
-         
-    
+        
           delay (4000);
       
             myservo4.write(90);
             myservo2.write(90);    
             myservo3.write(90);
             myservo5.write(90);       
-            delay(15);                       
-          
-        
+            delay(15);                         
         }
     
         
@@ -157,15 +128,13 @@ void loop() {
         Serial.println("Rock");
         lcd.clear();
         lcd.print("Rock");
-         
-     
+            
             myservo2.write(180);
             myservo3.write(180);
             myservo4.write(180);
             myservo5.write(180);           
             delay(15);                       
-         
-    
+            
           delay (4000);
         
             myservo2.write(90);
@@ -173,20 +142,8 @@ void loop() {
             myservo4.write(90);
             myservo5.write(90);               
             delay(15);                       
-      
-
-      
-    
-    
     }
 
-    delay(1000);
- 
-
-    
-    }
-  
-
-  
-  
+    delay(1000);  
+    } 
 }
